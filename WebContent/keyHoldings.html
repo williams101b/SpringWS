@@ -5,10 +5,16 @@
 		<title>Index Page</title>
 		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+		<style type="text/css">
+			span.title{
+				font-size:25px;
+			}
+		</style>
 	</head>
 	<body ng-controller="myController">
 		<div class="container">
-			<h3>{{keyHoldingClass}}</h3>
+			<span class="title">{{keyHoldingClass}}</span>
+			<b><a href="#">All Holdings</a></b>
 			<div class="pull-right">
 				<div class="btn-group" dropdown is-open="status.isopen">
 					<button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
