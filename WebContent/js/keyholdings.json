@@ -1,0 +1,60 @@
+{
+  "class": "KeyHoldingsWidget",
+  "keyHoldings": [
+    {
+      "class": "KeyHoldingsRow",
+      "assetClassFilter": "Non-Priced Alternative Investments",
+      "holdingName": "SPDR DJ Wilshire GL Real Estate ETF",
+      "symbol": "RWO",
+      "assetClass": "Other Investments",
+      "marketValue": 2356988,
+      "changePercentage": 0.01,
+      "direction": "up"
+    },
+    {
+      "class": "KeyHoldingsRow",
+      "assetClassFilter": "Public Equity",
+      "holdingName": "Apple, Inc.",
+      "symbol": "AAPL",
+      "assetClass": "Public Equity",
+      "marketValue": 134598,
+      "changePercentage": 3.021,
+      "direction": "up"
+    },
+    {
+      "class": "KeyHoldingsRow",
+      "assetClassFilter": "Cash, Deposits & Money Market Funds",
+      "holdingName": "U.S. Dollar",
+      "symbol": "USD",
+      "assetClass": "Cash",
+      "marketValue": 35000,
+      "changePercentage": 0.31,
+      "direction": "down"
+    },
+    {
+      "class": "KeyHoldingsRow",
+      "assetClassFilter": "Public Equity",
+      "holdingName": "Volkswagon Aktiengesellschaft",
+      "symbol": "VLKAY",
+      "assetClass": "Public Equity",
+      "marketValue": 16503,
+      "changePercentage": 1.11,
+      "direction": "up"
+    },
+    {
+      "class": "KeyHoldingsRow",
+      "assetClassFilter": "Public Equity",
+      "holdingName": "Dynamic Equity Managers: Portfolio 1 Series Class 1",
+      "symbol": "GMSAP",
+      "assetClass": "Public Equity",
+      "marketValue": 6500,
+      "changePercentage": 1,
+      "direction": "down"
+    }
+  ],
+  "footnotesMap": "",
+  "formatMetadata": "",
+  "asOfTimestamp": "March 9, 2015 5:13:26 PM EDT",
+  "currencyISO": "USD",
+  "prefCurr": "USD"
+}

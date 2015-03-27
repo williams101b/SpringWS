@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+	<head>
+		<meta charset="UTF-8">
+		<title>Index Page</title>
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.3.14/angular.min.js"></script>
+	</head>
+	<body ng-controller="myController">
+		<div class="container">
+			<h3>{{keyHoldingClass}}</h3>
+			<div class="pull-right">
+				<div class="btn-group" dropdown is-open="status.isopen">
+					<button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+						All Key Holdings <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-repeat="keyHolding in keyHoldings">
+							<a href="#">{{keyHolding.assetClassFilter}}</a>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-group" dropdown>
+					<button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+						{{sortBySize[0]}} <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-repeat="size in sortBySize">
+							<a href="#">{{size}}</a>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-group" dropdown>
+					<button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+						{{showMoreRows[0]}} <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-repeat="numOfRows in showMoreRows">
+							<a href="#">{{numOfRows}}</a>
+						</li>
+					</ul>
+				</div>
+				<div class="btn-group" dropdown>
+					<button type="button" class="btn btn-default dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+						{{export[0]}} <span class="caret"></span>
+					</button>
+					<ul class="dropdown-menu" role="menu">
+						<li ng-repeat="exportOption in export">
+							<a href="#">{{exportOption}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<table class="table table-striped table-bordered">
+				<thead>
+					<tr>
+						<th>Holding</th>
+						<th>Symbol</th>
+						<th>Market Value</th>
+						<th>Today's Change</th>
+						<th>Asset Class</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="keyHolding in keyHoldings">
+						<td><a href="#">{{keyHolding.holdingName}}</a></td>
+						<td><a href="#">{{keyHolding.symbol}}</a></td>
+						<td>{{keyHolding.marketValue | currency}}</td>
+						<td>
+							<span>{{keyHolding.direction == 'up' ? '+' : '-'}}</span>
+							{{keyHolding.changePercentage}}%
+						</td>
+						<td><a href="#">{{keyHolding.assetClass}}</a></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<script src="js/ui-bootstrap-tpls-0.12.1.min.js"></script>
+		<script src="js/app.js"></script>
+	</body>
+</html>
